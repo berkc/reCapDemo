@@ -29,11 +29,9 @@ public class Main {
 		campaignManager.update(campaign1);
 		campaignManager.delete(campaign1);
 		
-		SaleManager saleManager = new SaleManager(player1);
-		saleManager.sale(product1);
-		
-		SaleManager saleManager2 = new SaleManager(player1, campaign1);
-		saleManager2.sale(product1);
+		SaleManager saleManager = new SaleManager();
+		saleManager.sale(product1, player1);
+		saleManager.sale(product1, player1, campaign1);
 		
 	}
 

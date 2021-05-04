@@ -6,20 +6,16 @@ import Entities.Player;
 import Entities.Product;
 
 public class SaleManager implements SaleService{
-	Player player;
-	Campaign campaign;
 	
-	public SaleManager(Player player){
-		this.player=player;
-	}
-	
-	public SaleManager(Player player,Campaign campaign){
-		this.player=player;
-		this.campaign=campaign;
-	}
-	
+
 	@Override
-	public void sale(Product product) {
-		System.out.println(product.getProductName()+ "Satýldý" );
+	public void sale(Product product, Player player) {
+		System.out.println(product.getProductName()+ "ürün satýldý" + player.getFirstName());
+	}
+
+	@Override
+	public void sale(Product product, Player player, Campaign campaign) {
+		System.out.println(product.getProductName()+ "ürün satýldý " + player.getFirstName() + " kampanya uygulandý "+campaign.getCampaignName());
+		
 	}
 }

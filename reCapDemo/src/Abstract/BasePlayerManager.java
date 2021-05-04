@@ -7,7 +7,6 @@ public abstract class BasePlayerManager implements PlayerService {
 	@Override
 	public void add(Player player) {
 		System.out.println("Oyuncu Eklendi : "+player.getFirstName());
-		
 	}
 
 	@Override
